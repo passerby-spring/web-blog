@@ -1,4 +1,5 @@
 import 'uno.css'
+import '@/styles/base.css'
 
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
