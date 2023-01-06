@@ -9,6 +9,7 @@ import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import VueComponents from 'unplugin-vue-components/vite'
 import VueMarkDown from 'vite-plugin-vue-markdown'
+import UnoCss from 'unocss/vite'
 
 export default defineConfig({
   resolve: {
@@ -25,6 +26,7 @@ export default defineConfig({
         }),
       },
     }),
+    UnoCss(),
     Pages({
       extensions: ['vue', 'md'],
       extendRoute(route) {
