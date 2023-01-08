@@ -1,3 +1,4 @@
 <template>
+  <NavBar />
   <RouterView />
 </template>
