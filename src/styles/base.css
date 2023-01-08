@@ -1,3 +1,15 @@
+:root {
+  --color-scheme: light;
+  --bg-color: #fff;
+  --text-color: #333;
+}
+
+:root.dark {
+  --color-scheme: dark;
+  --bg-color: #000;
+  --text-color: #ddd;
+}
+
 *,
 *::before,
 *::after {
@@ -9,6 +21,9 @@
 
 body {
   line-height: 1.5;
+  color-scheme: var(--color-scheme);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 a {
@@ -17,4 +32,8 @@ a {
 
 ol, ul {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }

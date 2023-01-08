@@ -48,6 +48,10 @@ export default defineConfig({
         'vue',
         'vue-router',
         '@vueuse/head',
+        '@vueuse/core',
+      ],
+      dirs: [
+        './src/composables/**.ts',
       ],
       vueTemplate: true,
     }),

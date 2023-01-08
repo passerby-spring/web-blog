@@ -15,6 +15,7 @@
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue-macros/volar": "^0.5.8",
+    "@vueuse/core": "^9.10.0",
     "@vueuse/head": "^1.0.22",
     "eslint": "^8.31.0",
     "gray-matter": "^4.0.3",

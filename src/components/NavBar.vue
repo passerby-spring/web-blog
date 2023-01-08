@@ -15,12 +15,18 @@ const navList = computed(() => [
         </h1>
       </RouterLink>
     </section>
-    <section ml-auto>
+    <section ml-auto flex items-center>
       <nav space-x-8>
-        <RouterLink v-for="item of navList" :key="item.title" text-xl text-gray-7 border-b hover:border-b-solid :to="item.link">
+        <RouterLink v-for="item of navList" :key="item.title" text-xl color-inherit border-b hover:border-b-solid :to="item.link">
           {{ item.title }}
         </RouterLink>
       </nav>
+      <section ml-8>
+        <button border-none bg-transparent text-xl @click="toggleColorScheme()">
+          <i-ri-moon-line v-show="!isDark" />
+          <i-ri-sun-line v-show="isDark" />
+        </button>
+      </section>
     </section>
   </header>
 </template>
