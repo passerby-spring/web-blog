@@ -10,6 +10,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import VueComponents from 'unplugin-vue-components/vite'
 import VueMarkDown from 'vite-plugin-vue-markdown'
 import UnoCss from 'unocss/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineConfig({
   resolve: {
@@ -38,6 +40,9 @@ export default defineConfig({
         return route
       },
     }),
+    Icons({
+      defaultStyle: 'vertical-align: sub',
+    }),
     AutoImport({
       imports: [
         'vue',
@@ -49,6 +54,9 @@ export default defineConfig({
     VueComponents({
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.md$/],
+      resolvers: [
+        IconsResolver(),
+      ],
     }),
     VueMarkDown({
       headEnabled: true,
