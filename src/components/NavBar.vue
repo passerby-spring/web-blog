@@ -10,7 +10,7 @@ const navList = computed(() => [
   <header flex items-center max-w-screen-2xl mx-auto h16 px-8>
     <section>
       <RouterLink v-slot="{ navigate }" to="/" custom>
-        <h1 cursor-pointer font-italic text-violet @click="navigate()">
+        <h1 class="header-logo" @click="navigate()">
           Passerby Spring
         </h1>
       </RouterLink>
