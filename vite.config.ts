@@ -65,6 +65,7 @@ export default defineConfig({
     VueMarkDown({
       headEnabled: true,
       wrapperClasses: 'article',
+      wrapperComponent: 'ArticleWrapper',
     }),
   ],
   server: {
