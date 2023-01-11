@@ -12,6 +12,7 @@ import VueMarkDown from 'vite-plugin-vue-markdown'
 import UnoCss from 'unocss/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import hljs from 'highlight.js'
 
 export default defineConfig({
   resolve: {
@@ -66,6 +67,19 @@ export default defineConfig({
       headEnabled: true,
       wrapperClasses: 'article',
       wrapperComponent: 'ArticleWrapper',
+      markdownItOptions: {
+        quotes: '""\'\'',
+      },
+      markdownItSetup(md) {
+        md.set({
+          highlight(str, lang) {
+            if (lang && hljs.getLanguage(lang))
+              return `<pre class="hljs"><code>${hljs.highlight(str, { language: lang }).value}</code></pre>`
+
+            return `<pre class="hljs"><code>${str}</code></pre>`
+          },
+        })
+      },
     }),
   ],
   server: {
