@@ -8,13 +8,15 @@ title: index page
 
 `hello` *hello* **hello**, 你好，你好，你好
 
+nothing is impossible
+
 ## 引用测试
 
-> 这是一段引用
+> 或许是不知梦的缘故，流离之人追逐幻影
 
 ## 代码测试
 
-下面是一段**js**代码
+下面是一段 **js** 代码
 
 ```js
 function sayHi() {
@@ -32,7 +34,7 @@ function sayHi() {
 
 ### 有序列表
 
-- A
-- B
-- C
+1. A
+2. B
+3. C
 
